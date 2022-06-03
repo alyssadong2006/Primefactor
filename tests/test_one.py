@@ -3,3 +3,6 @@ import pytest
 def testsone():
     with pytest.raises(ValueError):
         assert primefactor.generate_prime_factors("hi")
+
+def teststwo():
+    assert primefactor.generate_prime_factors(1) == []

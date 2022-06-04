@@ -9,3 +9,6 @@ def teststwo():
 
 def teststhree():
     assert primefactor.generate_prime_factors(2) == [2]
+
+def testsfour():
+    assert primefactor.generate_prime_factors(3) == [3]

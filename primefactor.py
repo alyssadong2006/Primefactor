@@ -1,16 +1,22 @@
-def generate_prime_factors(number):
+import math
+def generate_prime_factors(n):
     pFactors=[]
 
-    if not isinstance(number,int):
+    if not isinstance(n,int):
         raise ValueError("Please type number.")
 
-    for i in range(2,number+1):
-        if number % i == 0:
-            count = 1
-            for j in range(2,(i//2 + 1)):
-                if(i % j == 0):
-                    count = 0
-                    break
-            if(count == 1):
-                pFactors.append(i)
+    while n % 2 == 0:
+        pFactors.append(2)
+        n = n / 2
+
+    factor=3
+    while factor<int(math.sqrt(n))+1:
+        while (n % i == 0):
+            pFactors.append(i)
+            n = n / i
+        factor+=2
+
+    if n > 2:
+        pFactors.append(n)
+
     return pFactors

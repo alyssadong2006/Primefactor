@@ -21,3 +21,6 @@ def testssix():
 
 def testsseven():
     assert primefactor.generate_prime_factors(8) == [2,2,2]
+
+def testseight():
+    assert primefactor.generate_prime_factors(9) == [3,3]

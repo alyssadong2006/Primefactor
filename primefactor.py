@@ -11,9 +11,9 @@ def generate_prime_factors(n):
 
     factor=3
     while factor<int(math.sqrt(n))+1:
-        while (n % i == 0):
-            pFactors.append(i)
-            n = n / i
+        while (n % factor == 0):
+            pFactors.append(factor)
+            n = n / factor
         factor+=2
 
     if n > 2:

@@ -15,3 +15,6 @@ def testsfour():
 
 def testsfive():
     assert primefactor.generate_prime_factors(4) == [2,2]
+
+def testssix():
+    assert primefactor.generate_prime_factors(6) == [2,3]

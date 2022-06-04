@@ -1,22 +1,24 @@
+"""Calculates prime factors"""
 import math
-def generate_prime_factors(n):
-    pFactors=[]
+def generate_prime_factors(number):
+    """generates prime factors"""
+    p_factors=[]
 
-    if not isinstance(n,int):
+    if not isinstance(number,int):
         raise ValueError("Please type number.")
 
-    while n % 2 == 0:
-        pFactors.append(2)
-        n = n / 2
+    while number % 2 == 0:
+        p_factors.append(2)
+        number = number / 2
 
     factor=3
-    while factor<int(math.sqrt(n))+1:
-        while (n % factor == 0):
-            pFactors.append(factor)
-            n = n / factor
+    while factor<int(math.sqrt(number))+1:
+        while number % factor == 0:
+            p_factors.append(factor)
+            number = number / factor
         factor+=2
 
-    if n > 2:
-        pFactors.append(n)
+    if number > 2:
+        p_factors.append(number)
 
-    return pFactors
+    return p_factors
